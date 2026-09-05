@@ -1,0 +1,102 @@
+<article class="container container--narrow detail">
+  <a routerLink="/" fragment="projects" class="detail__back">← All projects</a>
+
+  @if (project(); as p) {
+    <header class="detail__header u-fade-in">
+      <h1 class="detail__title">{{ p.title }}</h1>
+      @if (p.confidential) {
+        <app-badge>Sanitized professional case study</app-badge>
+      }
+      <p class="detail__lead">{{ p.detailedDescription }}</p>
+
+      @if (p.technologies.length) {
+        <ul class="detail__tech" aria-label="Technologies">
+          @for (tech of p.technologies; track tech) {
+            <li>
+              <app-badge>{{ tech }}</app-badge>
+            </li>
+          }
+        </ul>
+      }
+
+      @if (showLinks()) {
+        <div class="detail__links">
+          @if (p.githubUrl) {
+            <a [href]="p.githubUrl" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          }
+          @if (p.liveUrl) {
+            <a [href]="p.liveUrl" target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+          }
+        </div>
+      }
+    </header>
+
+    @if (screenshots().length) {
+      <section class="detail__section">
+        <h2>Screenshots</h2>
+        <app-image-gallery [images]="screenshots()" label="Screenshot" />
+      </section>
+    }
+
+    @if (p.architectureImage) {
+      <section class="detail__section">
+        <h2>Architecture</h2>
+        <div class="detail__architecture">
+          <img
+            appImgFallback
+            [src]="p.architectureImage"
+            [alt]="p.title + ' architecture diagram'"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </section>
+    }
+
+    @if (p.responsibilities.length) {
+      <section class="detail__section">
+        <h2>Responsibilities</h2>
+        <ul class="detail__list">
+          @for (r of p.responsibilities; track r) {
+            <li>{{ r }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (p.challenges.length) {
+      <section class="detail__section">
+        <h2>Challenges</h2>
+        <ul class="detail__list">
+          @for (c of p.challenges; track c) {
+            <li>{{ c }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (p.solutions.length) {
+      <section class="detail__section">
+        <h2>Solutions</h2>
+        <ul class="detail__list">
+          @for (s of p.solutions; track s) {
+            <li>{{ s }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (p.outcomes.length) {
+      <section class="detail__section">
+        <h2>Outcomes</h2>
+        <ul class="detail__list">
+          @for (o of p.outcomes; track o) {
+            <li>{{ o }}</li>
+          }
+        </ul>
+      </section>
+    }
+  } @else {
+    <p class="detail__missing">Project not found.</p>
+  }
+</article>

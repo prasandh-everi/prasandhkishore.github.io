@@ -1,0 +1,51 @@
+// =============================================================================
+// Reusable, minimal animation utilities.
+// All are automatically neutralized by the prefers-reduced-motion rule in
+// _reset.scss, so components can use these freely.
+// =============================================================================
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.u-fade-in {
+  animation: fade-in var(--transition-base) both;
+}
+
+.u-slide-up {
+  animation: slide-up var(--transition-base) both;
+}
+
+.u-scale-in {
+  animation: scale-in var(--transition-base) both;
+}

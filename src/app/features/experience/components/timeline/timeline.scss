@@ -1,0 +1,108 @@
+.timeline {
+  list-style: none;
+  position: relative;
+  padding-left: var(--spacing-xl);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 7px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--spacing-2xl);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__marker {
+  position: absolute;
+  left: calc(-1 * var(--spacing-xl) + 1px);
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  border: 3px solid var(--color-background);
+  border-radius: var(--radius-full);
+}
+
+.timeline__dates {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline__role {
+  font-size: var(--font-size-lg);
+}
+
+.timeline__company {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline__location {
+  color: var(--color-muted);
+}
+
+.timeline__desc {
+  margin-bottom: var(--spacing-md);
+}
+
+.timeline__subhead {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}
+
+.timeline__list {
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-muted);
+}
+
+.timeline__list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  list-style: none;
+  margin-top: var(--spacing-md);
+}
+
+.timeline__more {
+  align-self: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+}
+
+.timeline__details {
+  margin-top: var(--spacing-md);
+  color: var(--color-muted);
+}
+
+.timeline__details summary {
+  width: fit-content;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.timeline__list--details {
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+}

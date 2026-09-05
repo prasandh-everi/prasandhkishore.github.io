@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="container header__inner">
+    <a routerLink="/" fragment="home" class="header__brand" (click)="closeMenu()">
+      {{ name()?.name ?? 'Portfolio' }}
+    </a>
+
+    <nav class="header__nav" [class.header__nav--open]="menuOpen()" aria-label="Primary">
+      <ul class="header__list">
+        @for (item of navItems; track item.fragment) {
+          <li>
+            <a
+              routerLink="/"
+              [fragment]="item.fragment"
+              class="header__link"
+              [class.is-active]="activeSection() === item.fragment"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <app-theme-toggle />
+      <button
+        type="button"
+        class="header__menu-btn"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>

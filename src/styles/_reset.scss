@@ -1,0 +1,88 @@
+// =============================================================================
+// Minimal, modern CSS reset
+// Only what we actually need — no heavy normalize dependency.
+// =============================================================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  // Prevent accidental horizontal scrolling on small screens.
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-semibold);
+  // Avoid long words/titles overflowing narrow viewports.
+  overflow-wrap: break-word;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Offset anchored sections so the sticky header doesn't cover the heading
+// when navigating via #fragment links.
+:target,
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+// Accessible focus — visible for keyboard users, suppressed for mouse.
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+// Respect users who prefer reduced motion (global safety net).
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

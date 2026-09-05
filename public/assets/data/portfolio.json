@@ -1,0 +1,312 @@
+{
+  "profile": {
+    "name": "Prasandh Kishore P",
+    "role": "Senior Software Engineer",
+    "profileImage": "assets/images/profile/profile2.webp",
+    "shortIntroduction": "I build reliable .NET and Angular systems for complex, real-time, and hardware-integrated workflows.",
+    "longIntroduction": [
+      "Senior Software Engineer with 5+ years of experience developing enterprise applications across web, desktop, client-server, and hardware-integrated environments. I specialize in full-stack development using C#, ASP.NET Core, Web API, Angular, React, Entity Framework Core, and WinForms.",
+      "At Everi, I work on next-generation kiosk and ATM-related systems, developing modular and plugin-based architectures, multi-threaded components, and hardware-integrated workflows. My experience includes designing RESTful and gRPC services, implementing real-time communication using SignalR, and building maintainable solutions following SOLID principles and clean architecture practices.",
+      "I have also worked closely with cross-functional teams, participated in system design discussions, peer programming, code reviews, and Agile delivery. I focus on solving complex engineering problems while building reliable, scalable, and maintainable software."
+    ],
+    "location": "Chennai, Tamil Nadu, India",
+    "availability": "Open to opportunities"
+  },
+  "social": [
+    {
+      "platform": "github",
+      "label": "GitHub",
+      "url": "https://github.com/prasandhkishore",
+      "icon": "github"
+    },
+    {
+      "platform": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/prasandh-kishore-p/",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "leetcode",
+      "label": "LeetCode",
+      "url": "https://leetcode.com/u/prasandh_kishore/",
+      "icon": "leetcode"
+    },
+    {
+      "platform": "email",
+      "label": "Email",
+      "url": "mailto:prasanthpalanisamy5@gmail.com",
+      "icon": "mail"
+    },
+    {
+      "platform": "phone",
+      "label": "Phone",
+      "url": "tel:+918610423908",
+      "icon": "phone"
+    }
+  ],
+  "documents": [
+    {
+      "id": "resume",
+      "type": "resume",
+      "title": "Resume",
+      "description": "My latest resume.",
+      "file": "assets/documents/resume/resume.pdf",
+      "viewable": false,
+      "downloadable": true
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-everi",
+      "company": "Everi Holdings Inc.",
+      "role": "Senior Software Engineer",
+      "startDate": "2024-04",
+      "endDate": null,
+      "location": "Chennai, India",
+      "description": "Developing next-generation kiosk and ATM-related software solutions using .NET, Angular, and hardware-integrated technologies.",
+      "responsibilities": [
+        "Design and develop enterprise applications using C#, .NET Core, ASP.NET Core, Angular, and Web API.",
+        "Develop modular and plugin-based architectures for hardware-integrated kiosk and ATM workflows.",
+        "Build RESTful and gRPC services for communication between distributed application components.",
+        "Implement real-time application communication using SignalR.",
+        "Develop multi-threaded components to support reliable hardware-integrated workflows.",
+        "Participate in system design discussions, peer programming, code reviews, and Agile delivery.",
+        "Investigate and resolve complex application, integration, and state-management issues across distributed components."
+      ],
+      "achievements": [
+        "Contributed to the development and enhancement of next-generation kiosk platform capabilities.",
+        "Designed reusable popup and notification handling components using SignalR-based communication.",
+        "Implemented reusable application components and state-management improvements across multiple kiosk workflows.",
+        "Improved maintainability by applying SOLID principles, modular architecture, and reusable service abstractions."
+      ],
+      "technologies": [
+        "C#",
+        ".NET Core",
+        "ASP.NET Core",
+        "Web API",
+        "Angular",
+        "TypeScript",
+        "Entity Framework Core",
+        "MySQL",
+        "gRPC",
+        "SignalR",
+        "WinForms",
+        "Electron"
+      ]
+    },
+    {
+      "id": "exp-aspire-se2",
+      "company": "Aspire Systems",
+      "role": "Software Engineer II",
+      "startDate": "2023-04",
+      "endDate": "2024-03",
+      "location": "Chennai, Tamil Nadu, India",
+      "workMode": "Hybrid",
+      "employmentType": "Full-time",
+      "description": "Developed scalable full-stack applications using ASP.NET Core, .NET Web API, MySQL, and React, with a focus on maintainable backend architecture and reliable API development.",
+      "responsibilities": [
+        "Developed scalable web applications using ASP.NET Core, .NET Web API, and MySQL.",
+        "Designed and implemented backend modules following SOLID principles and clean coding practices.",
+        "Built RESTful APIs and optimized SQL queries to improve application performance.",
+        "Developed reusable frontend components using React.js.",
+        "Participated in Agile ceremonies, peer code reviews, and collaborative development activities."
+      ],
+      "achievements": [
+        "Contributed to the development of maintainable and scalable full-stack application modules.",
+        "Improved backend performance through SQL query optimization and efficient API implementation.",
+        "Contributed to code quality through peer reviews and adherence to SOLID and clean coding principles."
+      ],
+      "technologies": [
+        "C#",
+        "ASP.NET Core",
+        ".NET Web API",
+        "React.js",
+        "JavaScript",
+        "MySQL",
+        "SQL",
+        "REST APIs",
+        "Entity Framework Core"
+      ]
+    },
+    {
+      "id": "exp-aspire-se",
+      "company": "Aspire Systems",
+      "role": "Software Engineer I",
+      "startDate": "2020-10",
+      "endDate": "2023-04",
+      "location": "Chennai Area, India",
+      "workMode": "Hybrid",
+      "employmentType": "Full-time",
+      "description": "Developed and customized enterprise content management solutions using ASP.NET, M-Files VAF, JavaScript, and SQL Server.",
+      "responsibilities": [
+        "Designed and developed web applications using ASP.NET and the M-Files Vault Application Framework (VAF).",
+        "Developed and customized M-Files solutions to extend product functionality and meet specific business requirements.",
+        "Developed UI extensions using JavaScript, HTML, and CSS.",
+        "Worked with the M-Files UI Extension Framework to build and customize frontend functionality.",
+        "Developed database-related functionality using SQL Server.",
+        "Worked with M-Files content management systems across different business use cases.",
+        "Participated in Agile development activities and delivered incremental features."
+      ],
+      "achievements": [
+        "Gained hands-on experience in enterprise content management and M-Files platform development.",
+        "Developed customized M-Files solutions using VAF to extend and tailor platform functionality.",
+        "Earned M-Files certifications across IT, Business Administration, User, QMS, and Developer areas."
+      ],
+      "technologies": [
+        "C#",
+        "ASP.NET",
+        "M-Files",
+        "M-Files VAF",
+        "M-Files UI Extension Framework",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "SQL Server",
+        "Entity Framework Core"
+      ]
+    },
+    {
+      "id": "exp-aspire-intern",
+      "company": "Aspire Systems",
+      "role": "Intern",
+      "startDate": "2020-06",
+      "endDate": "2020-10",
+      "location": "Chennai, Tamil Nadu, India",
+      "workMode": "Remote",
+      "employmentType": "Internship",
+      "description": "Contributed to the development of an online assessment application while gaining practical experience in ASP.NET MVC, MySQL, and web application development.",
+      "responsibilities": [
+        "Contributed to the development of an Online Assessment Application using ASP.NET MVC and MySQL.",
+        "Assisted in implementing role-based authentication and core backend functionality.",
+        "Developed application features using C#, HTML, CSS, and JavaScript.",
+        "Participated in code reviews, testing, and Agile team activities."
+      ],
+      "achievements": [
+        "Gained hands-on experience in C# and ASP.NET MVC development.",
+        "Built a strong foundation in backend development, databases, frontend technologies, and Agile software development."
+      ],
+      "technologies": [
+        "C#",
+        "ASP.NET MVC",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }    
+  ],
+  "projects": [
+    {
+      "id": "modular-kiosk-platform",
+      "title": "Modular Kiosk Application Platform",
+      "shortDescription": "A sanitized case study on structuring reusable capabilities across hardware-integrated kiosk workflows.",
+      "detailedDescription": "A professional engineering case study focused on a modular application platform for complex kiosk workflows. Product-specific details are intentionally omitted; the case study highlights the architectural constraints, engineering responsibilities, and reusable patterns involved.",
+      "technologies": ["C#", ".NET", "Angular", "TypeScript", "gRPC", "WinForms", "Electron"],
+      "responsibilities": [
+        "Developed and enhanced workflow capabilities across frontend and backend components.",
+        "Contributed to modular and plugin-based application boundaries.",
+        "Integrated UI, application services, and hardware-facing components.",
+        "Investigated state, communication, timeout, and integration issues across distributed components."
+      ],
+      "challenges": [
+        "Keeping platform capabilities isolated while supporting shared workflows and hardware integrations.",
+        "Maintaining consistent state across UI, backend services, and device-facing components."
+      ],
+      "solutions": [
+        "Applied modular service boundaries and reusable abstractions around shared capabilities.",
+        "Used structured communication contracts to reduce coupling between distributed components.",
+        "Separated workflow logic from device-specific integration concerns where possible."
+      ],
+      "outcomes": [
+        "Improved reuse and maintainability across related workflows.",
+        "Created clearer extension points for additional platform capabilities.",
+        "Reduced the risk of changes in one integration affecting unrelated workflows."
+      ],
+      "confidential": true
+    },
+    {
+      "id": "realtime-notification-layer",
+      "title": "Real-Time Notification and Popup Layer",
+      "shortDescription": "A reusable SignalR-based communication approach for notifications and user decisions across application components.",
+      "detailedDescription": "A sanitized case study describing a reusable notification and popup mechanism for distributed application components. It focuses on message flow, user-response handling, and keeping UI behavior consistent without exposing proprietary implementation details.",
+      "technologies": ["SignalR", "ASP.NET Core", "Angular", "TypeScript", "C#"],
+      "responsibilities": [
+        "Designed reusable UI and service abstractions for popup-driven workflows.",
+        "Integrated real-time notifications between backend and frontend components.",
+        "Handled user responses, timeout behavior, and state updates across asynchronous flows."
+      ],
+      "challenges": [
+        "Correlating a notification with the correct workflow and user response.",
+        "Preventing stale or duplicate messages from leaving the UI in an inconsistent state.",
+        "Keeping the mechanism reusable across workflows with different presentation requirements."
+      ],
+      "solutions": [
+        "Used typed message contracts and correlation identifiers for request-response flows.",
+        "Centralized popup orchestration and lifecycle handling instead of duplicating behavior in individual screens.",
+        "Applied explicit timeout and cleanup paths for asynchronous operations."
+      ],
+      "outcomes": [
+        "Established more consistent popup behavior across multiple workflows.",
+        "Reduced duplicated notification and timeout handling code.",
+        "Made new popup-driven use cases easier to integrate."
+      ],
+      "confidential": true
+    },
+    {
+      "id": "workflow-state-reliability",
+      "title": "Reliable Workflow State Management",
+      "shortDescription": "A case study on handling timeouts, confirmations, rejection paths, and recovery in transaction-oriented interfaces.",
+      "detailedDescription": "A sanitized professional case study about keeping long-running, transaction-oriented workflows consistent when timeouts, user prompts, service responses, and hardware events can arrive asynchronously.",
+      "technologies": ["Angular", "TypeScript", "C#", ".NET", "SignalR", "gRPC"],
+      "responsibilities": [
+        "Implemented workflow states and transitions across UI and backend components.",
+        "Handled timeout, confirmation, rejection, and recovery scenarios.",
+        "Diagnosed race conditions and state inconsistencies in asynchronous flows."
+      ],
+      "challenges": [
+        "Avoiding conflicting transitions when user actions, timers, and service events occur close together.",
+        "Returning the application to a predictable state after interruption or rejection.",
+        "Providing clear feedback while background processing is still active."
+      ],
+      "solutions": [
+        "Defined explicit workflow states and guarded transitions between them.",
+        "Centralized timer cleanup and terminal-state handling.",
+        "Used real-time events to synchronize visible UI state with backend processing."
+      ],
+      "outcomes": [
+        "Improved consistency across timeout- and confirmation-driven workflows.",
+        "Made edge cases easier to reason about, test, and troubleshoot.",
+        "Reduced the chance of a workflow remaining in an ambiguous state."
+      ],
+      "confidential": true
+    }
+  ],
+  "skills": [
+    {
+      "category": "Core languages",
+      "items": ["C#", "TypeScript", "JavaScript", "SQL"]
+    },
+    {
+      "category": "Web engineering",
+      "items": ["Angular", "RxJS", "Signals", "React", "ASP.NET Core", "Web API", "Entity Framework Core"]
+    },
+    {
+      "category": "Distributed & real-time",
+      "items": ["SignalR", "gRPC", "REST APIs", "Multi-threading"]
+    },
+    {
+      "category": "Architecture",
+      "items": ["Clean Architecture", "SOLID Principles", "Design Patterns", "Plugin Architecture", "Modular Architecture"]
+    },
+    {
+      "category": "Platforms & tools",
+      "items": ["WinForms", "Electron", "MySQL", "Git", "GitHub", "Azure DevOps"]
+    }
+  ],
+  "meta": {
+    "seoTitle": "Prasandh Kishore P — Senior Software Engineer",
+    "seoDescription": "Portfolio of Prasandh Kishore P, a Senior Software Engineer specializing in .NET, Angular, enterprise applications, and hardware-integrated systems.",
+    "canonicalUrl": "https://your-portfolio.example.com",
+    "ogImage": "assets/images/profile/profile.webp"
+  }
+}

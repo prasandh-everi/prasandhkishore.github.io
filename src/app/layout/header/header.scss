@@ -1,0 +1,108 @@
+@use '../../../styles/mixins' as m;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--color-background) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+.header__brand {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.header__brand:hover {
+  color: var(--color-primary);
+}
+
+.header__list {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+
+.header__link {
+  color: var(--color-muted);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.header__link:hover,
+.header__link.is-active {
+  color: var(--color-text);
+}
+
+.header__link.is-active {
+  color: var(--color-primary);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.header__menu-btn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.6rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.header__menu-bar {
+  height: 2px;
+  background: var(--color-text);
+  border-radius: var(--radius-full);
+}
+
+// ----- Mobile-first: nav hidden behind a menu; actions show the button -----
+.header__nav {
+  position: absolute;
+  inset: 4rem 0 auto;
+  display: none;
+  padding: var(--spacing-md);
+  background: var(--color-surface-raised);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__nav--open {
+  display: block;
+}
+
+.header__nav--open .header__list {
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+// ----- Desktop: inline nav, hide the hamburger -----
+@include m.media-up(m.$breakpoint-md) {
+  .header__nav {
+    position: static;
+    display: block;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  .header__menu-btn {
+    display: none;
+  }
+}

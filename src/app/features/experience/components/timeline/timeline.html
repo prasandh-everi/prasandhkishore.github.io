@@ -1,0 +1,48 @@
+<ol class="timeline">
+  @for (item of items(); track item.id) {
+    <li class="timeline__item u-slide-up">
+      <div class="timeline__marker" aria-hidden="true"></div>
+      <div class="timeline__body">
+        <p class="timeline__dates">{{ item.startDate | dateRange: item.endDate }}</p>
+        <h3 class="timeline__role">{{ item.role }}</h3>
+        <p class="timeline__company">
+          {{ item.company }} <span class="timeline__location">· {{ item.location }}</span>
+        </p>
+        <p class="timeline__desc">{{ item.description }}</p>
+
+        @if (item.achievements.length) {
+          <p class="timeline__subhead">Key achievements</p>
+          <ul class="timeline__list">
+            @for (a of item.achievements.slice(0, 3); track a) {
+              <li>{{ a }}</li>
+            }
+          </ul>
+        }
+
+        @if (item.technologies.length) {
+          <ul class="timeline__tech" aria-label="Technologies">
+            @for (tech of item.technologies.slice(0, 8); track tech) {
+              <li>
+                <app-badge>{{ tech }}</app-badge>
+              </li>
+            }
+            @if (item.technologies.length > 8) {
+              <li class="timeline__more">+{{ item.technologies.length - 8 }} more</li>
+            }
+          </ul>
+        }
+
+        @if (item.responsibilities.length) {
+          <details class="timeline__details">
+            <summary>View responsibilities</summary>
+            <ul class="timeline__list timeline__list--details">
+              @for (r of item.responsibilities; track r) {
+                <li>{{ r }}</li>
+              }
+            </ul>
+          </details>
+        }
+      </div>
+    </li>
+  }
+</ol>

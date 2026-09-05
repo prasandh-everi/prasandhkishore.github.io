@@ -1,0 +1,45 @@
+.doc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-on-contrast);
+  background: var(--color-contrast);
+  border: 1px solid var(--color-contrast);
+  border-radius: var(--radius-md);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.doc-btn:hover {
+  background: var(--color-contrast-hover);
+  border-color: var(--color-contrast-hover);
+}
+
+.doc-btn--secondary {
+  color: var(--color-text);
+  background: var(--color-surface-raised);
+  border-color: var(--color-border);
+}
+
+.doc-btn--secondary:hover {
+  color: var(--color-primary);
+  background: var(--color-surface-raised);
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 479px) {
+  :host {
+    display: block;
+    width: 100%;
+  }
+
+  .doc-btn {
+    width: 100%;
+  }
+}

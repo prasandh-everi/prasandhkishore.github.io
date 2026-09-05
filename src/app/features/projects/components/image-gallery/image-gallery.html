@@ -1,0 +1,74 @@
+@if (count()) {
+  <div class="gallery">
+    <button
+      type="button"
+      class="gallery__stage"
+      (click)="open()"
+      [attr.aria-label]="'Open ' + label() + ' ' + (currentIndex() + 1) + ' of ' + count()"
+    >
+      <img
+        appImgFallback
+        [src]="current()"
+        [alt]="label() + ' ' + (currentIndex() + 1)"
+        loading="lazy"
+        decoding="async"
+      />
+    </button>
+
+    @if (count() > 1) {
+      <ul class="gallery__thumbs" aria-label="Screenshots">
+        @for (img of images(); track img; let i = $index) {
+          <li>
+            <button
+              type="button"
+              class="gallery__thumb"
+              [class.is-active]="i === currentIndex()"
+              (click)="select(i)"
+              [attr.aria-label]="label() + ' ' + (i + 1)"
+              [attr.aria-current]="i === currentIndex() ? 'true' : null"
+            >
+              <img [src]="img" [alt]="''" loading="lazy" decoding="async" />
+            </button>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+
+  @if (isOpen()) {
+    <div class="lightbox" role="dialog" aria-modal="true" [attr.aria-label]="label() + ' viewer'">
+      <button
+        type="button"
+        class="lightbox__backdrop"
+        (click)="close()"
+        aria-label="Close image viewer"
+      ></button>
+
+      <button type="button" class="lightbox__close" (click)="close()" aria-label="Close">✕</button>
+
+      @if (count() > 1) {
+        <button
+          type="button"
+          class="lightbox__nav lightbox__nav--prev"
+          (click)="prev()"
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+      }
+
+      <img class="lightbox__image" [src]="current()" [alt]="label() + ' ' + (currentIndex() + 1)" />
+
+      @if (count() > 1) {
+        <button
+          type="button"
+          class="lightbox__nav lightbox__nav--next"
+          (click)="next()"
+          aria-label="Next image"
+        >
+          ›
+        </button>
+      }
+    </div>
+  }
+}

@@ -1,0 +1,23 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__copy">© {{ year }} {{ name()?.name ?? 'Portfolio' }}. All rights reserved.</p>
+
+    @if (social().length) {
+      <ul class="footer__social" aria-label="Social links">
+        @for (link of social(); track link.platform) {
+          <li>
+            <a
+              [href]="link.url"
+              class="footer__link"
+              target="_blank"
+              rel="noopener noreferrer"
+              [attr.aria-label]="link.label"
+            >
+              <app-icon [name]="iconFor(link.icon)" />
+            </a>
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</footer>

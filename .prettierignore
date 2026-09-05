@@ -1,0 +1,10 @@
+# Build output
+dist/
+.angular/
+node_modules/
+
+# Generated / non-source
+*.min.js
+*.min.css
+coverage/
+public/

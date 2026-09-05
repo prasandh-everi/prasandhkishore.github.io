@@ -1,0 +1,75 @@
+<app-section sectionId="contact" eyebrow="Get in touch" heading="Contact">
+  <p class="contact__intro">
+    Have a question or an opportunity? Fill in the form to compose a message in Gmail.
+  </p>
+
+  <form class="contact__form" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+    <div class="field">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        autocomplete="name"
+        [attr.aria-invalid]="showError('name')"
+        [attr.aria-describedby]="showError('name') ? 'name-error' : null"
+      />
+      @if (showError('name')) {
+        <p id="name-error" class="field__error">Please enter your name.</p>
+      }
+    </div>
+
+    <div class="field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        autocomplete="email"
+        [attr.aria-invalid]="showError('email')"
+        [attr.aria-describedby]="showError('email') ? 'email-error' : null"
+      />
+      @if (showError('email')) {
+        <p id="email-error" class="field__error">Please enter a valid email address.</p>
+      }
+    </div>
+
+    <div class="field">
+      <label for="subject">Subject</label>
+      <input
+        id="subject"
+        type="text"
+        formControlName="subject"
+        [attr.aria-invalid]="showError('subject')"
+        [attr.aria-describedby]="showError('subject') ? 'subject-error' : null"
+      />
+      @if (showError('subject')) {
+        <p id="subject-error" class="field__error">Subject must be at least 3 characters.</p>
+      }
+    </div>
+
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        rows="6"
+        formControlName="message"
+        [attr.aria-invalid]="showError('message')"
+        [attr.aria-describedby]="showError('message') ? 'message-error' : null"
+      ></textarea>
+      @if (showError('message')) {
+        <p id="message-error" class="field__error">Message must be at least 10 characters.</p>
+      }
+    </div>
+
+    <div class="contact__actions">
+      <app-button type="submit">Compose in Gmail</app-button>
+    </div>
+
+    @if (feedback()) {
+      <p class="contact__feedback" role="status" aria-live="polite">
+        {{ feedback() }}
+      </p>
+    }
+  </form>
+</app-section>

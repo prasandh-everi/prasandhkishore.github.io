@@ -1,0 +1,44 @@
+.about__bio {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-text);
+  max-width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+
+.about__bio + .about__bio {
+  margin-top: var(--spacing-lg);
+}
+
+.about__skills {
+  margin-top: var(--spacing-2xl);
+}
+
+.about__skills-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
+  gap: var(--spacing-2xl);
+  row-gap: var(--spacing-2xl);
+}
+
+.about__category {
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.about__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  list-style: none;
+}

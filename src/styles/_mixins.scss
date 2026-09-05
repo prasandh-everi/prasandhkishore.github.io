@@ -1,0 +1,35 @@
+// =============================================================================
+// Reusable SCSS mixins and layout helpers.
+// =============================================================================
+
+// Standard breakpoints (mobile-first).
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+@mixin media-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Constrain content width and center it.
+@mixin container($max: var(--container-max)) {
+  width: 100%;
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+}
+
+// Visually hidden but available to screen readers.
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

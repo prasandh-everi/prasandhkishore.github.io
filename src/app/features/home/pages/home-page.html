@@ -1,0 +1,50 @@
+@if (isLoading()) {
+  <section class="container hero" aria-busy="true">
+    <p class="hero__status">Loading…</p>
+  </section>
+} @else if (hasError()) {
+  <section class="container hero">
+    <p class="hero__status hero__status--error">
+      Sorry, the portfolio content could not be loaded. Please try again later.
+    </p>
+  </section>
+} @else if (profile(); as p) {
+  <section id="home" class="container hero u-fade-in">
+    <div class="hero__content">
+      <p class="hero__eyebrow">{{ p.availability }}</p>
+      <h1 class="hero__name">{{ p.name }}</h1>
+      <p class="hero__role">{{ p.role }}</p>
+      <p class="hero__intro">{{ p.shortIntroduction }}</p>
+
+      <div class="hero__actions">
+        <a class="hero__cta hero__cta--primary" routerLink="/" fragment="projects">
+          Explore case studies <span aria-hidden="true">&darr;</span>
+        </a>
+        @if (resume(); as doc) {
+          <app-document-button [document]="doc" action="download" />
+        }
+      </div>
+
+      <div class="hero__social">
+        <app-social-links [links]="social()" />
+      </div>
+
+      <p class="hero__location">{{ p.location }}</p>
+    </div>
+
+    @if (p.profileImage) {
+      <div class="hero__image-wrap">
+        <img
+          class="hero__image"
+          appImgFallback
+          [src]="p.profileImage"
+          [alt]="p.name + ' — ' + p.role"
+          width="320"
+          height="320"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    }
+  </section>
+}

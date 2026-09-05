@@ -1,0 +1,43 @@
+<app-card [interactive]="true">
+  <a class="pcard" [routerLink]="['/projects', project().id]">
+    @if (project().thumbnail) {
+      <div class="pcard__media">
+        <img
+          appImgFallback
+          [src]="project().thumbnail"
+          [alt]="project().title + ' thumbnail'"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    } @else {
+      <div class="pcard__media pcard__media--generated" aria-hidden="true">
+        <span class="pcard__visual-kicker">Engineering case study</span>
+        <span class="pcard__visual-mark">{{ project().title.charAt(0) }}</span>
+        <span class="pcard__visual-stack">
+          {{ project().technologies[0] }} · {{ project().technologies[1] }}
+        </span>
+      </div>
+    }
+
+    <div class="pcard__body">
+      <h3 class="pcard__title">{{ project().title }}</h3>
+      @if (project().confidential) {
+        <div class="pcard__label"><app-badge>Sanitized professional work</app-badge></div>
+      }
+      <p class="pcard__desc">{{ project().shortDescription }}</p>
+
+      @if (project().technologies.length) {
+        <ul class="pcard__tech" aria-label="Technologies">
+          @for (tech of project().technologies.slice(0, 4); track tech) {
+            <li>
+              <app-badge>{{ tech }}</app-badge>
+            </li>
+          }
+        </ul>
+      }
+
+      <span class="pcard__cta">View details →</span>
+    </div>
+  </a>
+</app-card>
